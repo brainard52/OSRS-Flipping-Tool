@@ -1,5 +1,3 @@
 The following files were retrieved from https://gist.github.com/Foadsf/f5379523a073ef468690ae66b287560d
-• dev.py
-• push_macro.py
-• speng.sh
+• push_macro.py -> embed-py
 
