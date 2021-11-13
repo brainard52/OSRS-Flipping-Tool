@@ -1,15 +1,21 @@
-all: Merching.ods site-packages.zip
+REP = util/replace
 
+all: dist/merching.py
 
-Merching.ods: Merching_base.ods
-	./embed-py Merching.py Merching_base.ods Merching.ods
+dist/merching.py: tmp/merching.html dist
+	$(REP) tmp/merching.html src/merching.py HTML -o dist/merching.py
+	chmod +x dist/merching.py
 
-site-packages.zip:
-	mkdir -p site-packages temp
-	pip3 download certifi charset_normalizer idna requests urllib3 -d temp
-	find temp -name "*.whl" -type f -exec unzip -d site-packages {} \;
-	zip -r site-packages.zip site-packages/
+tmp/merching.html: src/merching.css src/merching.js tmp
+	$(REP) src/merching.css src/merching.html CSS -o tmp/merching.tmp
+	$(REP) src/merching.js tmp/merching.tmp JS -o tmp/merching.html
+	rm tmp/merching.tmp
+
+tmp:
+	mkdir -p tmp
+
+dist:
+	mkdir -p dist
 
 clean:
-	rm -rf Merching.ods site-packages.zip site-packages temp
-
+	rm -rf tmp dist
