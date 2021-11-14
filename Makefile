@@ -23,3 +23,7 @@ lint: all
 .PHONY: clean
 clean:
 	rm -rf tmp dist
+
+.PHONY: edit
+edit:
+	vim TODO.md src/*.py src/*.html src/*.js src/*.css util/* Makefile README.md
