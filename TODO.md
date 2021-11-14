@@ -1,5 +1,8 @@
 # TODO
 
+## Documentation
+* Write initial README.md
+
 ## Functional
 * Create table
 * Implement sorting for table
