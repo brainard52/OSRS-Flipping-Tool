@@ -27,3 +27,7 @@ clean:
 .PHONY: edit
 edit:
 	vim TODO.md src/*.py src/*.html src/*.js src/*.css util/* Makefile README.md
+
+.PHONY: todo
+todo:
+	find . -type f -exec grep TODO {} + -o -name .git -prune
