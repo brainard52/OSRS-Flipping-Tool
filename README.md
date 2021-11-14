@@ -32,19 +32,20 @@ platform-specific dependencies:
 
 ### macOS
 * [Brew](https://brew.sh/)
-* magic
     ```
     brew install libmagic
-    pip3 install python-magic
     ```
 
+With the platform-specific dependencies installed, you will need to install the
+following dependencies for any of the compatible platforms:
 * magic
     ```
     pip3 install pywebview
     pip3 install python-magic
     ```
 
-After you have installed the dependencies, it's just a simple matter of running the following from the project root:
+After you have installed the dependencies, it's just a simple matter of running
+the following from the project root: 
 ```
     make
     dist/merching.py
