@@ -45,8 +45,10 @@ platform-specific dependencies:
     ```
 
 After you have installed the dependencies, it's just a simple matter of running the following from the project root:
+```
     make
     dist/merching.py
+```
 
 Note: I was unable to get this to build in Windows as it depends on gnu make,
 which didn't seem to have much support for Windows. Additionally, I couldn't
